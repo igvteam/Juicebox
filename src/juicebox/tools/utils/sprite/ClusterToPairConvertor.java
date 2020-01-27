@@ -42,7 +42,7 @@ public class ClusterToPairConvertor {
             String nextLine;
             while ((nextLine = reader.readLine()) != null) {
                 String[] tokens = tabPattern.split(nextLine.trim());
-                if (tokens.length > 2 && tokens.length < 1002) {
+                if (tokens.length > 2 && tokens.length < 102) {
                     float score = 2.0f / (tokens.length - 1);   // Downweighted -- todo make this a parameter
                     Location[] locs = parseTokens(tokens);
                     for (int i = 0; i < locs.length; i++) {
